@@ -1,22 +1,31 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css);
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-.manual-btn:hover .slide img,
-.slide img {
-  opacity: 0.5;
+#fyndCarousel {
+  width: 100%;
+  margin-top: 55px;
 }
-.navigation-auto,
-.navigation-manual {
-  position: absolute;
-  right: 100px;
-  display: flex;
+.nav-item {
+  font-size: 15px;
+  font-weight: 400;
+}
+.nav-item:hover .nav-link {
+  color: #299617 !important;
+}
+.nav-link {
+  cursor: pointer;
+}
+html,
+body {
+  min-height: 100%;
 }
 .flex-img img,
 .indivi-image img,
 .map-logo,
 .slide img {
   object-fit: cover;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 *,
 textarea {
@@ -45,36 +54,10 @@ body {
   border-radius: 2px;
   border: 3px solid #968d8d;
 }
-nav {
-  width: 100%;
-  height: 70px;
-  /* position: fixed; */
-  margin-bottom: 20px;
-  top: 0;
-  z-index: 10;
-  background-color: #000;
-}
-.main-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  margin: auto;
-  height: 70px;
-}
-.footer-main,
-.nav-sections {
-  justify-content: space-between;
-}
+
 .nav-logo {
   cursor: pointer;
-  width: 150px;
-}
-.nav-sections {
-  display: flex;
-  align-items: center;
-  width: 600px;
-  color: #f5f5f5;
+  width: 100px;
 }
 .section-1,
 .section-2,
@@ -83,12 +66,11 @@ nav {
 .section-5,
 .section-6,
 .section-7 {
-  padding: 7px 10px;
-  font-size: 13px;
-  text-transform: uppercase;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 7px;
-
+  padding: 7px 10px !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  border: 1px solid rgb(0, 0, 0) !important;
+  border-radius: 7px !important;
 }
 .section-1:hover,
 .section-2:hover,
@@ -97,10 +79,10 @@ nav {
 .section-5:hover,
 .section-6:hover,
 .section-7:hover {
-  border: 1px solid #299617;
-  color: #299617;
-  border-radius: 7px;
-  cursor: pointer;
+  border: 1px solid #299617 !important;
+  color: #299617 !important;
+  border-radius: 7px !important;
+  cursor: pointer !important;
 }
 .slider {
   width: 100%;
@@ -177,16 +159,13 @@ nav {
 .body-section-1,
 .body-section-2,
 .body-section-4,
-.body-section-6{
+.body-section-6 {
   width: 95%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.body-section-1 {
-  padding-bottom: 140px;
 }
 .heading-1,
 .heading-2,
@@ -198,7 +177,6 @@ nav {
   font-weight: 600;
   padding-left: 20px;
   text-transform: uppercase;
-  
 }
 .item-heading,
 .item-para {
@@ -209,17 +187,15 @@ nav {
 }
 .flex-section {
   display: flex;
-  gap: 50px;
   align-items: flex-start;
-  justify-content:center;
+  justify-content: space-between;
+  gap: 100px;
   color: gray;
 }
 .para-1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
+  gap: 20px;
   font-size: 14px;
 }
 .buttons-section button {
@@ -242,16 +218,16 @@ nav {
   width: 100%;
   margin: auto;
 }
-.para-2 {
-  flex-direction: column;
-  display: inline;
-}
+
 .number {
   border: 1px solid #299617;
   background-color: #299617;
   color: #f5f5f5;
   padding: 10px;
   width: fit-content;
+}
+.offcanvas {
+  width: 200px!important;
 }
 .item-heading {
   font-weight: 500;
@@ -263,7 +239,6 @@ nav {
   font-size: 13px;
   width: 65%;
 }
-.indivi-image p,
 .para-content-1 {
   text-transform: uppercase;
   color: #f5f5f5;
@@ -302,8 +277,8 @@ nav {
   margin-top: 5px;
   font-size: 15px;
 }
-.name{
-    font-weight: 600;
+.name {
+  font-weight: 600;
 }
 .role {
   font-size: 13px;
@@ -322,8 +297,6 @@ nav {
   display: none;
   transition: 0.1s ease-in;
 }
-.icons-container i,
-.indivi-image,
 .submit {
   transition: 0.2s ease-in;
 }
@@ -354,8 +327,7 @@ nav {
 .body-section-3,
 .body-section-4,
 .body-section-5,
-.body-section-6,
-.footer-container {
+.body-section-6 {
   padding-top: 10px;
   padding-bottom: 40px;
   width: 100%;
@@ -363,43 +335,25 @@ nav {
   margin: auto;
 }
 .images-container-1 {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
 }
+.card {
+  border-radius: 10px !important;
+}
 .indivi-image {
   width: 280px;
   height: 200px;
-  cursor: pointer;
 }
 .indivi-image img {
   width: 100%;
   height: 200px;
 }
-.indivi-image p {
-  background-color: gray;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  position: relative;
-  bottom: 38px;
-  visibility: hidden;
-}
-.indivi-image:hover p {
-  visibility: visible;
-  background-color: #817d7d;
-  font-size: 13px;
-}
-.indivi-image:hover img {
-  opacity: 0.3;
-}
+
 .contents-container {
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -425,6 +379,7 @@ nav {
   text-align: center;
   font-size: 12px;
 }
+
 .section-5-container {
   display: flex;
   justify-content: center;
@@ -455,43 +410,20 @@ nav {
 .heading-5 {
   color: rgb(41, 41, 41);
 }
-.footer-main {
-  width: 95%;
-  margin: auto;
-  padding-bottom: 0 !important;
-  display: flex;
-  align-items: center;
-  color: #f5f5f5;
-}
-.left-text {
-  font-size: 15px;
-}
-.footer-container {
-  background-color: #000;
-  padding-bottom: 25px;
-  padding-top: 25px;
-}
-.icons-container {
-  font-size: 22px;
-}
+
 .container,
 .text-area-label {
   font-size: 9px;
   text-transform: uppercase;
 }
-.icons-container i {
-  padding: 8px;
-}
-.icons-container i:hover {
-  color: #299617;
-  cursor: pointer;
-}
+
 .body-section-2 {
   padding-bottom: 70px;
   padding-top: 40px;
 }
 .body-main-section-1,
-.body-section-4 {
+.body-section-4,
+.body-section-6 {
   padding-bottom: 50px;
   padding-top: 30px;
   background-color: #fff;
@@ -500,7 +432,6 @@ nav {
 .body-section-6 {
   background-color: #fff;
 }
-
 
 .map-logo {
   width: 100%;
@@ -522,7 +453,11 @@ nav {
 }
 .email-form {
   width: 450px;
-  background-color: #f4f0f0;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  margin-right: 20px;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
 }
@@ -535,9 +470,11 @@ textarea {
 }
 .container {
   display: flex;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   justify-content: space-between;
   align-items: center;
-  font-weight: 100;
+  font-weight: 500;
 }
 .input-1 label,
 .input-2 label {

@@ -160,11 +160,10 @@ body {
 .body-section-2,
 .body-section-4,
 .body-section-6 {
-  width: 95%;
-  margin: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .heading-1,
@@ -186,10 +185,8 @@ body {
   position: relative;
 }
 .flex-section {
+  width: 85%;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 100px;
   color: gray;
 }
 .para-1 {
@@ -197,6 +194,12 @@ body {
   flex-direction: column;
   gap: 20px;
   font-size: 14px;
+  text-transform: none !important;
+  font-weight: normal;
+}
+.para-2{
+  text-transform: none !important;
+  font-weight: normal;
 }
 .buttons-section button {
   padding: 10px;
@@ -216,7 +219,6 @@ body {
 .sec-1 {
   border-bottom: 3px solid #d3d3d3;
   width: 100%;
-  margin: auto;
 }
 
 .number {
@@ -227,7 +229,7 @@ body {
   width: fit-content;
 }
 .offcanvas {
-  width: 200px!important;
+  width: 200px !important;
 }
 .item-heading {
   font-weight: 500;
